@@ -3,6 +3,13 @@ module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
+  safelist: [
+    "bg-post-color-yellow",
+    "bg-post-color-orange",
+    "bg-post-color-lilac",
+    "bg-post-color-green",
+    "bg-post-color-cyan",
+  ],
   theme: {
     extend: {
       colors: {
@@ -13,6 +20,12 @@ module.exports = {
         "custom-gray-800":"#343539",
         "custom-gray-900":"#000000",
         "custom-gray-300":"#8C8A97",
+
+        "post-color-yellow" : "rgba(251, 235, 149, 0.4)",
+        "post-color-orange" : "rgba(253, 186, 163, 0.4)",
+        "post-color-lilac" : "rgba(182, 165, 203, 0.4)",
+        "post-color-green" : "rgba(151, 210, 188, 0.6)",
+        "post-color-cyan" : "rgba(174, 223, 232, 0.6)",
       },
       fontFamily: {
         ubuntu: ['Ubuntu', 'sans-serif'],

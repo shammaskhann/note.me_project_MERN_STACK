@@ -3,7 +3,7 @@ import NotesModel from '../../models/Notes';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-export default function Notes({ note, onDragStart, onDragEnd }) {
+export default function Notes({ note }) {
   const [noteContent, setNoteContent] = useState(note.content);
   const [isEditing, setIsEditing] = useState(false);
   const contentEditableRef = useRef(null);
@@ -31,9 +31,6 @@ export default function Notes({ note, onDragStart, onDragEnd }) {
 
   return (
     <div className={noteContainerClass}
-    draggable
-    onDragStart={(e) => onDragStart(e, note)}
-    onDragOver={onDragEnd}
     >
       <div
         className="noteBody dark:text-custom-white text-ellipsis"
@@ -70,8 +67,6 @@ export default function Notes({ note, onDragStart, onDragEnd }) {
 
 Notes.propTypes = {
   note: PropTypes.instanceOf(NotesModel).isRequired,
-  onDragStart: PropTypes.func.isRequired,
-  onDragEnd: PropTypes.func.isRequired,
 };
 
 Notes.defaultProps = {
